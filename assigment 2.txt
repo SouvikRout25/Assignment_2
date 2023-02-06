@@ -1,0 +1,289 @@
+Question 1:-
+
+where you can use this?
+"this()" is a contructor call refer to the construct class constructor
+.Its used to call one constructor  from amother contructor in the same class.
+example:
+public class Stdent{
+   private String name;
+   private int rollNo;
+public Student(){
+      this("manas",22);
+}
+public Student(String name, int rollNo){
+this.name=name;
+this.rollNo=rollNo;
+}
+// getters and setters
+}
+
+Question 2:-
+
+why array index start with 0 only why not -1,1etc.
+
+The reason arrays in programming language typically start with index 0 is due to historical reasons and they way that 
+computer memory is stored ans acceessed.In early computer systems, memory was acceseed asa a sequence as a sequence of address locations,
+and each location held one byte od data.To access an item in memory,you needed to specify its address,
+ehich eas just in index in the sequence of memory location.when programming languages were developed,
+arrays were implemented asa a sequence of memory location,
+and accessing an array item meant accessing the memory location at the specified index.By convenction,
+the first item  in an array was, assisgned an  index of 0,so that tht the address of the first item was 0,
+the address of the second item was 1 ,and so on. this convention has been carried forward into modern programming language,
+so array still start with index 0.
+
+Question 3:-
+
+find out example where 3D,4d array only example
+
+int[] [] [] threeArray=new int[3][3][3];
+//3rd example
+for(int i=0;i< 3;i++){
+for(int j=0;j<3;j++){
+for(int k=0;k<3;k++){
+threeDArray[i][j][k]=i+j+k;
+
+
+
+Question 4:-
+4.Create 5 examples(hierarchy) where we can apply all OOP concepts and implement same 
+
+Example 1:-
+class EmployeeCount
+{
+   private int numOfEmployees = 0;
+   public void setNoOfEmployees (int count)
+   {
+       numOfEmployees = count;
+   }
+   public double getNoOfEmployees () 
+   {
+       return numOfEmployees;
+   }
+}
+public class EncapsulationExample
+{
+   public static void main(String args[])
+   {
+      EmployeeCount obj = new EmployeeCount ();
+      obj.setNoOfEmployees(5613);
+      System.out.println("No Of Employees: "+(int)obj.getNoOfEmployees());
+    }
+}
+
+Example 2 :-
+
+class GFG {
+	public static void main(String[] args)
+	{
+		System.out.println("GfG!");
+
+		Dog dog = new Dog();
+		dog.name = "Bull dog";
+		dog.color = "Brown";
+		dog.bark();
+		dog.run();
+
+		Cat cat = new Cat();
+		cat.name = "Rag doll";
+		cat.pattern = "White and slight brownish";
+		cat.meow();
+		cat.run();
+
+		Animal animal = new Animal();
+
+		animal.name = "My favourite pets";
+
+		animal.run();
+	}
+}
+
+class Animal {
+	String name;
+	public void run()
+	{
+
+		System.out.println("Animal is running!");
+	}
+}
+
+class Dog extends Animal {
+
+/// the class dog is the child and animal is the parent
+
+	String color;
+	public void bark()
+	{
+		System.out.println(name + " Wooh ! Wooh !"
+						+ "I am of colour " + color);
+	}
+}
+
+class Cat extends Animal {
+
+	String pattern;
+
+	public void meow()
+	{
+		System.out.println(name + " Meow ! Meow !"
+						+ "I am of colour " + pattern);
+	}
+}
+
+Example 3:-
+#include <iostream>
+using namespace std;
+
+void output(float);
+void output(int);
+void output(int, float);
+
+int main()
+{
+	cout << "\nGfG!\n";
+	int a = 23;
+	float b = 2.3;
+
+	output(a);
+	output(b);
+	output(a, b);
+
+	return 0;
+}
+
+void output(int var)
+{ // same function name but different task
+	cout << "Integer number:\t" << var << endl;
+}
+
+void output(float var)
+{ // same function name but different task
+	cout << "Float number:\t" << var << endl;
+}
+
+void output(int var1, float var2)
+{ // same function name but different task
+	cout << "Integer number:\t" << var1;
+	cout << " and float number:" << var2;
+}
+
+Exmaple 4:-
+// Java program to Demonstrate Polymorphism
+
+// This class will contain
+// 3 methods with same name,
+// yet the program will
+// compile & run successfully
+public class Sum {
+
+	// Overloaded sum().
+	// This sum takes two int parameters
+	public int sum(int x, int y)
+	{
+		return (x + y);
+	}
+
+	// Overloaded sum().
+	// This sum takes three int parameters
+	public int sum(int x, int y, int z)
+	{
+		return (x + y + z);
+	}
+
+	// Overloaded sum().
+	// This sum takes two double parameters
+	public double sum(double x, double y)
+	{
+		return (x + y);
+	}
+
+	// Driver code
+	public static void main(String args[])
+	{
+		Sum s = new Sum();
+		System.out.println(s.sum(10, 20));
+		System.out.println(s.sum(10, 20, 30));
+		System.out.println(s.sum(10.5, 20.5));
+	}
+}
+
+Example 5:-
+abstract class Animal{
+   //abstract method
+   public abstract void animalSound();
+}
+public class Dog extends Animal{
+
+   public void animalSound(){
+	System.out.println("Woof");
+   }
+   public static void main(String args[]){
+	Animal obj = new Dog();
+	obj.animalSound();
+   }
+}
+
+
+
+Question 5 :-
+
+5.Create Fruit basket.Which will contain all types of fruits.You Should able to add fruit according  to user's choice.
+o/p:
+ a. Add Fruit in Fruit Basket
+       1.mango
+       2.orange
+       3.Apple
+import java.util.Scanner;
+       abtract class Beverges{
+     private int quantity;
+     private double price;
+
+public Bevarges(int quantity,double price){
+this.quantity=quantity;
+this.price=price;
+}
+public int getQuantity(){
+return quantity;
+}
+public int getPrice(){
+return price;
+}
+public abstract String getName();
+}
+  
+b.Display all fruits from fruit basket
+
+class Apple extends Beverge{
+   public Orange(int quantity,double price){
+super(quantity,price);
+}
+}
+abstact class juice extends Beverges{
+public Juice(int quantity,double price){
+super(quantity,price);
+
+
+c. What you want to make?
+	1.mango pulp
+	2.orange juice 
+	3.apple jam 
+
+public calss Test{
+Test(){
+}
+public static void main(String[] args){
+Fruit f=new Fruit();
+f.test();//
+
+Fruit f=new Mango();
+f.test();
+
+f=new Apple();
+if(f instance of Mango){
+((Mango)f).makePulp();
+}
+else if (f instance of Orange){
+(( Orange)f).makeJuice();
+}
+else(f instance of Apple){
+((Apple)f).makeJam();
+}
